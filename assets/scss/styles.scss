@@ -25,14 +25,6 @@ body {
   padding: 0;
 }
 
-body {
-  background-image: url(../images/bg-logo-gray.png), url(../images/bg-logo-gray.png);
-  background-position: -30% 60vh, 160% -22vh;
-  background-repeat: no-repeat, no-repeat;
-  background-attachment: fixed;
-  animation: moveBg 1.2s linear;
-}
-
 h1,
 h2,
 h3,
@@ -47,6 +39,8 @@ b {
 /* INCLUDES */
 @import "includes/animations";
 @import "includes/modal";
+@import "includes/form";
 
 /* PAGES */
 @import "pages/login";
+@import "pages/admin";

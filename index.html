@@ -22,20 +22,20 @@
           <p class="login-header-subhead">Administrador Comercial</p>
         </header>
 
-        <form action="./admin.html" class="login-form" method="post">
+        <form action="./admin.html" class="form login-form" method="post">
           <div class="login-form-inputs">
-            <div class="login-form-group">
+            <div class="form-group">
               <input type="email" id="input-email" name="email" autocomplete="off" required>
-              <label for="input-email" class="login-form-label" data-title="Usuario"></label>
+              <label for="input-email" class="form-label" data-title="Usuario"></label>
             </div>
 
-            <div class="login-form-group">
+            <div class="form-group">
               <input type="password" id="input-password" name="password" autocomplete="off" minlength="4" required>
-              <label for="input-password" class="login-form-label" data-title="Contraseña"></label>
+              <label for="input-password" class="form-label" data-title="Contraseña"></label>
             </div>
           </div>
 
-          <button class="login-form-btn">Ingresar</button>
+          <button class="form-btn">Ingresar</button>
         </form>
 
         <a href="javaScript:showHideModal();" class="login-link">No recuerdo mi contraseña</a>
@@ -54,13 +54,13 @@
 
         <p>Por favor ingrese el correo asociado a su cuenta. Se le enviará un enlace para que configure una nueva contraseña.</p>
 
-        <form action="./index.html" class="login-form" method="post">
-          <div class="login-form-group">
+        <form action="./index.html" class="form" method="post">
+          <div class="form-group">
             <input type="email" id="modal-email" name="email" autocomplete="off" required>
-            <label for="modal-email" class="login-form-label" data-title="Correo electrónico"></label>
+            <label for="modal-email" class="form-label" data-title="Correo electrónico"></label>
           </div>
 
-          <button class="login-form-btn">Enviar enlace</button>
+          <button class="form-btn">Enviar enlace</button>
         </form>
 
         <i class="modal-close" onclick="showHideModal()"></i>
