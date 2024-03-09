@@ -1,0 +1,52 @@
+:root {
+  --color-blue: #f1f6fb;
+  --color-green: #00e022;
+  --color-red: #dd3542;
+  --color-gray-8E: #8e8e8e;
+  --color-gray-DE: #dedede;
+  --color-gray-CC: #cccccc;
+  --color-gray-F7: #f7f7f7;
+  --color-blue-plomo: #abb9c7;
+  --color-blue-plomo-50: #abb9c780;
+  --color-text: #413e4d;
+  --color-shadow: #00000029;
+
+  --fw-normal: 400;
+  --fw-bold: 700;
+}
+
+html,
+body {
+  color: var(--color-text);
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: var(--fw-normal);
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url(../images/bg-logo-gray.png), url(../images/bg-logo-gray.png);
+  background-position: -30% 60vh, 160% -22vh;
+  background-repeat: no-repeat, no-repeat;
+  background-attachment: fixed;
+  animation: moveBg 1.2s linear;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+b {
+  font-weight: var(--fw-bold);
+}
+
+/* INCLUDES */
+@import "includes/animations";
+@import "includes/modal";
+
+/* PAGES */
+@import "pages/login";

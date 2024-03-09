@@ -1,0 +1,18 @@
+@keyframes moveBg {
+  from {
+    background-position: -60% 120vh, 320% -44vh;
+  }
+  to {
+    background-position: -30% 60vh, 160% -22vh;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
