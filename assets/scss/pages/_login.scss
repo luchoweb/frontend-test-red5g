@@ -7,7 +7,7 @@
   min-width: 100%;
   min-height: 100vh;
 
-  &.container {
+  &-container {
     display: grid;
     height: 100vh;
     margin: 0 auto;
@@ -67,6 +67,10 @@
       flex-direction: column;
       gap: 12px 0;
       padding: 16px;
+    }
+
+    &-btn {
+      margin-top: 32px;
     }
 
     @media (min-width: 475px) {

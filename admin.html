@@ -1,13 +1,111 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Administración - SUFIPAY</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <!-- Font Awesome Icons (CDN) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/fontawesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/solid.min.css"
+    />
   </head>
-  <body></body>
+  <body class="admin">
+    <header class="admin-header">
+      <div class="container full">
+        <div class="row items-center justify-between">
+          <div class="col"></div>
+          <div class="col">
+            <picture class="admin-header-logo">
+              <img src="assets/images/logo.png" alt="Sufipay" height="24" />
+            </picture>
+          </div>
+          <div class="col">
+            <a href="index.html" class="admin-header-link">
+              <span>Cerrar sesión</span>
+              <i class="fa-solid fa-arrow-right-to-bracket"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="admin-section">
+      <header class="admin-section-header">
+        <div class="container">
+          <div class="row items-center justify-between">
+            <div class="col">
+              <h1 class="admin-section-title">Mis Desembolsos</h1>
+            </div>
+            <div class="col">
+              <button class="form-btn has-icon">
+                <svg
+                  aria-hidden="true"
+                  focusable="false"
+                  data-prefix="fas"
+                  data-icon="arrow-down-to-line"
+                  role="img"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 384 512"
+                  height="24"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M32 480c-17.7 0-32-14.3-32-32s14.3-32 32-32H352c17.7 0 32 14.3 32 32s-14.3 32-32 32H32zM214.6 342.6c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 242.7V64c0-17.7 14.3-32 32-32s32 14.3 32 32V242.7l73.4-73.4c12.5-12.5 32.8-12.5 45.3 0s12.5 32.8 0 45.3l-128 128z"
+                    class=""
+                  ></path>
+                </svg>
+                <span>Descargar</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="admin-section-filters">
+        <div class="container">filters here</div>
+      </div>
+
+      <div class="admin-section-table">
+        <table class="table-withdraw">
+          <thead>
+            <tr>
+              <th>Fecha y hora</th>
+              <th>Número de desembolso</th>
+              <th>Tipo de documento</th>
+              <th>Número de documento</th>
+              <th>Monto</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>00-00-0000 00:00:00</td>
+              <td>00000000</td>
+              <td>Cédula</td>
+              <td>00000000</td>
+              <td>$00.000.000</td>
+            </tr>
+            <tr>
+              <td>00-00-0000 00:00:00</td>
+              <td>00000000</td>
+              <td>Cédula</td>
+              <td>00000000</td>
+              <td>$00.000.000</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </body>
 </html>

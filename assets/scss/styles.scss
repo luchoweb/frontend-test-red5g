@@ -6,6 +6,7 @@
   --color-gray-DE: #dedede;
   --color-gray-CC: #cccccc;
   --color-gray-F7: #f7f7f7;
+  --color-gray-FA: #fafafa;
   --color-blue-plomo: #abb9c7;
   --color-blue-plomo-50: #abb9c780;
   --color-text: #413e4d;
@@ -13,6 +14,9 @@
 
   --fw-normal: 400;
   --fw-bold: 700;
+
+  --container-max-width: 1136px;
+  --container-full-max-width: 1280px;
 }
 
 html,
@@ -34,6 +38,30 @@ h6,
 strong,
 b {
   font-weight: var(--fw-bold);
+}
+
+.container {
+  display: block;
+  margin: 0 auto;
+  max-width: var(--container-max-width);
+  padding: 0 24px;
+  width: calc(100% - 48px);
+
+  &.full {
+    max-width: var(--container-full-max-width);
+  }
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+
+  &.justify-between {
+    justify-content: space-between;
+  }
+
+  &.items-center {
+    align-items: center
+  }
 }
 
 /* INCLUDES */
