@@ -15,6 +15,7 @@
   --fw-normal: 400;
   --fw-bold: 700;
 
+  --container-width: calc(100% - 48px);
   --container-max-width: 1136px;
   --container-full-max-width: 1280px;
 }
@@ -26,6 +27,7 @@ body {
   font-size: 16px;
   font-weight: var(--fw-normal);
   margin: 0;
+  overflow-x: hidden;
   padding: 0;
 }
 
@@ -45,12 +47,13 @@ b {
   margin: 0 auto;
   max-width: var(--container-max-width);
   padding: 0 24px;
-  width: calc(100% - 48px);
+  width: var(--container-width);
 
   &.full {
     max-width: var(--container-full-max-width);
   }
 }
+
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -60,7 +63,7 @@ b {
   }
 
   &.items-center {
-    align-items: center
+    align-items: center;
   }
 }
 

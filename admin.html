@@ -10,7 +10,9 @@
       href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Open+Sans:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.min.css">
     <link rel="stylesheet" href="assets/css/styles.css" />
+
     <!-- Font Awesome Icons (CDN) -->
     <link
       rel="stylesheet"
@@ -74,7 +76,95 @@
       </header>
 
       <div class="admin-section-filters">
-        <div class="container">filters here</div>
+        <div class="container">
+          <form action="" class="form">
+            <div class="row">
+              <div class="col">
+                <div class="form-group">
+                  <select name="type-doc" id="type-doc">
+                    <option value=""></option>
+                    <option value="cc">Cédula</option>
+                    <option value="passport">Pasaporte</option>
+                  </select>
+                  <label
+                    for="type-doc"
+                    class="form-label"
+                    data-title="Tipo doc."
+                  ></label>
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-group">
+                  <input
+                    type="number"
+                    id="input-cc"
+                    name="cc"
+                    autocomplete="off"
+                    placeholder=""
+                  />
+                  <label
+                    for="input-cc"
+                    class="form-label"
+                    data-title="Número de documento"
+                  ></label>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    id="input-withdraw"
+                    name="withdraw"
+                    autocomplete="off"
+                    placeholder=""
+                  />
+                  <label
+                    for="input-withdraw"
+                    class="form-label"
+                    data-title="Número de desembolso"
+                  ></label>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    id="input-date-from"
+                    name="date-from"
+                    min="2024-01-01"
+                    placeholder=""
+                    class="input-date input-icon"
+                  />
+                  <label
+                    for="input-date-from"
+                    class="form-label"
+                    data-title="Desde"
+                  ></label>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    id="input-date-until"
+                    name="date-from"
+                    max="2024-12-31"
+                    placeholder=""
+                    class="input-date input-icon"
+                  />
+                  <label
+                    for="input-date-until"
+                    class="form-label"
+                    data-title="Hasta"
+                  ></label>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
       </div>
 
       <div class="admin-section-table">
@@ -88,24 +178,40 @@
               <th>Monto</th>
             </tr>
           </thead>
-          <tbody>
-            <tr>
-              <td>00-00-0000 00:00:00</td>
-              <td>00000000</td>
-              <td>Cédula</td>
-              <td>00000000</td>
-              <td>$00.000.000</td>
-            </tr>
-            <tr>
-              <td>00-00-0000 00:00:00</td>
-              <td>00000000</td>
-              <td>Cédula</td>
-              <td>00000000</td>
-              <td>$00.000.000</td>
-            </tr>
-          </tbody>
+          <tbody></tbody>
         </table>
       </div>
     </section>
+
+    <div class="admin-pagination">
+      <div class="admin-pagination-box">
+        <div class="row">
+          <div class="col pages">
+            <i class="fa fa-chevron-left"></i>
+            <div class="form-group">
+              <input type="number" name="page" id="page" value="1">
+              <span>de 10</span>
+            </div>
+            <i class="fa fa-chevron-right"></i>
+          </div>
+          <div class="col filter">
+            <div class="form">
+              <div class="form-group">
+                <select name="rows" id="rows">
+                  <option value="16">16</option>
+                  <option value="32">32</option>
+                </select>
+                <label for="rows" data-title="Registros por página"></label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <script src="/assets/js/scripts.js"></script>
   </body>
 </html>

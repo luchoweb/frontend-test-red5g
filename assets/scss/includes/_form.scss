@@ -8,37 +8,63 @@
     position: relative;
     flex: 1 1 100%;
 
-    input {
+    input,
+    select {
+      appearance: none;
       border: 1px solid var(--color-blue-plomo-50);
       border-radius: 6px;
       box-sizing: border-box;
       color: var(--color-text);
+      cursor: pointer;
+      font-family: "Open Sans", sans-serif;
       font-size: 1rem;
       height: 56px;
       padding: 20px 16px 5px 16px;
+      position: relative;
       width: 100%;
 
-      &:focus:invalid {
+      &:focus,
+      &:invalid:not(:placeholder-shown) {
         border-color: var(--color-red);
+        outline: none;
       }
 
       &:valid,
-      &:focus {
+      &:focus:valid {
         border: 1px solid var(--color-blue-plomo-50);
         outline: none;
       }
 
-      &:valid + label::before {
-        @extend .label-before;
-        content: attr(data-title);
+      &:required:valid,
+      &[type="text"]:not(:placeholder-shown) {
+        + label::before {
+          @extend .label-before;
+          content: attr(data-title);
+        }
       }
-      &:focus + label::before {
-        @extend .label-before;
-        color: var(--color-blue-plomo);
+
+      &:focus,
+      &:focus:invalid {
+        + label::before {
+          @extend .label-before;
+          color: var(--color-blue-plomo);
+        }
+      }
+
+      &[type="number"] {
+        appearance: textfield;
+
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
       }
     }
 
     label {
+      cursor: pointer;
+
       &::before {
         color: var(--color-blue-plomo);
         content: attr(data-title);
@@ -49,6 +75,31 @@
         transform: translateY(-50%);
         transition: 300ms all;
       }
+    }
+  }
+
+  input {
+    &.input-icon {
+      + label::after {
+        @extend .label-icon, .label-icon-right;
+        content: "\f073";
+        font-size: 24px;
+      }
+    }
+  }
+
+  select {
+    &:has(option:checked:not([value=""])) {
+      + label::before {
+        @extend .label-before;
+        color: var(--color-blue-plomo);
+      }
+    }
+
+    + label::after {
+      @extend .label-icon, .label-icon-right;
+      content: "\f078";
+      font-size: 20px;
     }
   }
 
@@ -79,5 +130,30 @@
     &.uppercase {
       text-transform: uppercase;
     }
+  }
+}
+
+.label-before {
+  font-size: 12px;
+  left: 10px;
+  line-height: 20px;
+  padding: 0 6px;
+  top: 16px;
+}
+
+.label-icon {
+  color: var(--color-red);
+  display: block;
+  font-family: "Font Awesome 6 Free";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  &-right {
+    right: 16px;
+  }
+
+  &-left {
+    left: 16px;
   }
 }
